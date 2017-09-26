@@ -1,8 +1,8 @@
 package com.ppl.fikkrip.itrip;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * Activity Splash berhubungan dengan apa yang ada pada layout activity_login
@@ -11,7 +11,7 @@ import android.os.Bundle;
  * Created by Fikkri Prasetya on 9/24/2017.
  */
 
-public class SplashActivity extends Activity {
+public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
