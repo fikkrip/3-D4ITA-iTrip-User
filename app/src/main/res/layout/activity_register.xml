@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_register"
+android:padding="10dp"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:background="@color/colorPrimary"
+android:layout_height="match_parent"
+android:weightSum="1">
+
+    <ImageView
+        android:layout_width="204dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="150dp"
+        android:src="@drawable/itripfull"
+        android:layout_weight="0.4" />
+
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:hint="Nama"
+        android:background="@drawable/form_register"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:fontFamily="sans-serif"
+        android:textSize="15sp"
+        android:drawableRight="@drawable/ic_account_circle_black_24dp"
+        />
+
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Username"
+        android:background="@drawable/form_register"
+        android:layout_weight="0.1"
+        android:textSize="15sp"
+        android:drawableRight="@drawable/ic_person_black_24dp"
+        />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:hint="Email"
+        android:background="@drawable/form_register"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:fontFamily="sans-serif"
+        android:textSize="15sp"
+        android:drawableRight="@drawable/ic_local_post_office_black_24dp"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Password"
+        android:background="@drawable/form_register"
+        android:inputType="textPassword"
+        android:layout_weight="0.1"
+        android:textSize="15sp"
+        android:drawableRight="@drawable/ic_remove_red_eye_black_24dp"/>
+
+    <Button
+        android:id="@+id/buttonRegis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button_login"
+        android:hint="SIGN UP"
+        android:textColorHint="#FFF"
+        android:textSize="15dp"/>
+
+</LinearLayout>
