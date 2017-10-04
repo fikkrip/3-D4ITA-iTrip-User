@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class LoginRequest extends StringRequest {
-    private static final String LOGIN_REQUEST_URL = "http://192.168.0.15/itrip/login/android/Login.php";
+    private static final String LOGIN_REQUEST_URL = "http://192.168.43.175/i-Trip/rest/Login.php";
     private Map<String, String> params;
 
     public LoginRequest(String username, String password, Response.Listener<String> listener) {

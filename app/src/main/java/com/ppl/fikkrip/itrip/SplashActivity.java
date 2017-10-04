@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
+    SessionManager session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +27,14 @@ public class SplashActivity extends AppCompatActivity {
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 } finally {
-                    startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-                    finish();
+                    session = new SessionManager(SplashActivity.this);
+                    if(session.isLoggedIn()) {
+                        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                        finish();
+                    }else{
+                        startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                        finish();
+                    }
                 }
             }
         };

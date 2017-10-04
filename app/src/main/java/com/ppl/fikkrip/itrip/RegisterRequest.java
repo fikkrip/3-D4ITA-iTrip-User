@@ -2,7 +2,6 @@ package com.ppl.fikkrip.itrip;
 
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,7 +10,7 @@ import java.util.Map;
  */
 
 public class RegisterRequest extends StringRequest {
-    private static final String REGISTER_REQUEST_URL = "http://192.168.0.15/itrip/login/android/Register.php";
+    private static final String REGISTER_REQUEST_URL = "http://192.168.43.175/i-Trip/rest/Register.php";
     private Map<String, String> params;
 
     public RegisterRequest(String nama, String username, String email, String password, Response.Listener<String> listener) {

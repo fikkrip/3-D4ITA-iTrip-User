@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">I-TRIP</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="ucon">Under Construction</string>
+    <string name="account">ACCOUNT</string>
+    <string name="explore">EXPLORE</string>
+    <string name="nearme">NEARME</string>
+    <string name="mytrip">MYTRIP</string>
 </resources>

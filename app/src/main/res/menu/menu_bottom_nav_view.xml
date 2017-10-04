@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/action_nearme"
+        android:icon="@drawable/ic_nearme"
+        android:title="Near Me" />
+    <item
+        android:id="@+id/action_mytrip"
+        android:icon="@drawable/ic_mytrip"
+        android:title="My Trip" />
+
+    <item
+        android:id="@+id/action_account"
+        android:icon="@drawable/ic_account"
+        android:title="Account" />
+</menu>
