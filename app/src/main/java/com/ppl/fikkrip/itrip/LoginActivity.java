@@ -96,6 +96,7 @@ public class LoginActivity extends AppCompatActivity{
                                     intent.putExtra("username", username);
                                     LoginActivity.this.startActivity(intent);
                                     session.createLoginSession(nama, username, email);
+                                    finish();
                                 } else {
                                     progressDialog.dismiss();
                                     AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
