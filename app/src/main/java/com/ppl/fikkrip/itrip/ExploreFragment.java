@@ -102,10 +102,12 @@ public class ExploreFragment extends Fragment {
                         JSONObject json = jsonArray.getJSONObject(a);
                         HashMap<String, String> map = new HashMap<String, String>();
                         map.put("id", json.getString("idWisata"));
-                        map.put("nama", json.getString("namaProvinsi"));
-                        map.put("deskripsi", json.getString("namaWisata"));
-                        map.put("kategori", json.getString("deskripsiWisata"));
-                        map.put("provinsi", json.getString("kategori"));
+                        map.put("namaProvinsi", json.getString("namaProvinsi"));
+                        map.put("namaWisata", json.getString("namaWisata"));
+                        map.put("deskripsiWisata", json.getString("deskripsiWisata"));
+                        map.put("kategori", json.getString("kategori"));
+                        map.put("lokasiWisata", json.getString("lokasiWisata"));
+                        map.put("gambarWisata", json.getString("gambarWisata"));
                         list_data.add(map);
                         RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext(), list_data);
                         lvhape.setAdapter(adapter);

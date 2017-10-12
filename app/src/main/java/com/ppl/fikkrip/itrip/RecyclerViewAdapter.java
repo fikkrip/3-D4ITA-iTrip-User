@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -29,12 +31,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-            //Glide.with(context)
-            //.load("http://192.168.95.77/app_blogvolley/img/" + list_data.get(position).get("nama"))
-            //.crossFade()
-            //.placeholder(R.mipmap.ic_launcher)
-            //.into(holder.imghape);
-            holder.txthape.setText(list_data.get(position).get("nama"));
+        Glide.with(c)
+                .load("http://192.168.43.191/i-Trip/img/" + list_data.get(position).get("gambarWisata")).crossFade()
+                .placeholder(R.mipmap.ic_launcher)
+                .into(holder.imghape);
+        holder.txtWisata.setText(list_data.get(position).get("namaWisata"));
+        holder.txtLokasi.setText(list_data.get(position).get("lokasiWisata"));
     }
 
     @Override
@@ -43,12 +45,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txthape;
+        TextView txtWisata;
+        TextView txtLokasi;
         ImageView imghape;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            txthape = (TextView) itemView.findViewById(R.id.txthape);
+            txtWisata = (TextView) itemView.findViewById(R.id.txtWisata);
+            txtLokasi = (TextView) itemView.findViewById(R.id.txtLokasi);
             imghape = (ImageView) itemView.findViewById(R.id.imghp);
         }
     }

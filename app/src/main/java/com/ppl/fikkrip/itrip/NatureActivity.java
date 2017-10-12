@@ -113,6 +113,8 @@ public class NatureActivity extends AppCompatActivity{
         spinner.setAdapter(new ArrayAdapter<String>(NatureActivity.this, android.R.layout.simple_spinner_dropdown_item, provinsiList));
     }
 
+
+
     public class ItemSelectedListener implements AdapterView.OnItemSelectedListener {
 
         //get strings of first item
