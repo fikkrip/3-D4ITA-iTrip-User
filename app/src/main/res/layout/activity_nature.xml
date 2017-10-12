@@ -58,7 +58,6 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:backgroundTint="@color/colorPrimary"
-            android:entries="@array/prov_sumatera"
             android:paddingTop="15dp"
             android:paddingRight="15dp"
             android:paddingBottom="15dp"

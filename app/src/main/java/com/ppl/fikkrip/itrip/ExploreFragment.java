@@ -38,7 +38,7 @@ public class ExploreFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_explore, container, false);
-        String url = "http://192.168.43.175/i-Trip/rest/ListPopular.php";
+        String url = getString(R.string.api)+"ListPopular.php";
 
         sumatera = (ImageButton) view.findViewById(R.id.imageSumatra);
         kalimantan = (ImageButton) view.findViewById(R.id.imageKalimantan);

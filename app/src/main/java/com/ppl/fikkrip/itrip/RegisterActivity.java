@@ -112,7 +112,7 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     };
 
-                    RegisterRequest registerRequest = new RegisterRequest(nama, username, email, password, responseListener);
+                    RegisterRequest registerRequest = new RegisterRequest(nama, username, email, password, getString(R.string.api)+"Register.php", responseListener);
                     RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                     queue.add(registerRequest);
                 }

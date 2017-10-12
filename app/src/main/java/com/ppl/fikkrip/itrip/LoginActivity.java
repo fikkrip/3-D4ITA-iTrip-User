@@ -70,7 +70,6 @@ public class LoginActivity extends AppCompatActivity{
                     etPassword.requestFocus();
                     Toast.makeText(LoginActivity.this, "Please Enter your Password!", Toast.LENGTH_SHORT).show();
                 } else {
-
                     progressDialog = new ProgressDialog(LoginActivity.this);
                     progressDialog.setTitle("Please Wait");
                     progressDialog.setMessage("Processing...");
@@ -112,7 +111,7 @@ public class LoginActivity extends AppCompatActivity{
                         }
                     };
 
-                    LoginRequest loginRequest = new LoginRequest(username, password, responseListener);
+                    LoginRequest loginRequest = new LoginRequest(username, password, getString(R.string.api)+"Login.php", responseListener);
                     RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
                     queue.add(loginRequest);
                 }

@@ -30,4 +30,6 @@
         <item>Kepulauan Bangka Belitung</item>
         <item>Lampung</item>
     </string-array>
+
+    <string name="api">"http://192.168.43.175/i-Trip/rest/"</string>
 </resources>

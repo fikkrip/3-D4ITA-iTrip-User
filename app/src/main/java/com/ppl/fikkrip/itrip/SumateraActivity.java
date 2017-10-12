@@ -68,6 +68,8 @@ public class SumateraActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SumateraActivity.this, NatureActivity.class);
+                String idSumatera = "idSumatera";
+                intent.putExtra("idSumatera", idSumatera);
                 startActivity(intent);
             }
         });
@@ -76,6 +78,8 @@ public class SumateraActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SumateraActivity.this, ModernActivity.class);
+                String idSumatera = "idSumatera";
+                intent.putExtra("idSumatera", idSumatera);
                 startActivity(intent);
             }
         });
@@ -84,6 +88,8 @@ public class SumateraActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SumateraActivity.this, CultureActivity.class);
+                String idSumatera = "idSumatera";
+                intent.putExtra("idSumatera", idSumatera);
                 startActivity(intent);
             }
         });
@@ -92,6 +98,8 @@ public class SumateraActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SumateraActivity.this, CulinaryActivity.class);
+                String idSumatera = "idSumatera";
+                intent.putExtra("idSumatera", idSumatera);
                 startActivity(intent);
             }
         });
@@ -100,6 +108,8 @@ public class SumateraActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SumateraActivity.this, EventActivity.class);
+                String idSumatera = "idSumatera";
+                intent.putExtra("idSumatera", idSumatera);
                 startActivity(intent);
             }
         });

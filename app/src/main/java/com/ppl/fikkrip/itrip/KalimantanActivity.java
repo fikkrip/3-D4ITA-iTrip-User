@@ -1,11 +1,14 @@
 package com.ppl.fikkrip.itrip;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
@@ -17,6 +20,7 @@ import java.util.HashMap;
 public class KalimantanActivity extends AppCompatActivity {
 
     SliderLayout sliderLayout;
+    private Button bNature, bModern, bCulture, bCulinary, bEvent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,12 @@ public class KalimantanActivity extends AppCompatActivity {
 
         sliderLayout = (SliderLayout) findViewById(R.id.slider);
         Toolbar ToolBarAtas = (Toolbar)findViewById(R.id.toolbar);
+        bNature = (Button) findViewById(R.id.nature);
+        bModern = (Button) findViewById(R.id.modern);
+        bCulture = (Button) findViewById(R.id.culture);
+        bCulinary = (Button) findViewById(R.id.culinary);
+        bEvent = (Button) findViewById(R.id.event);
+
         setSupportActionBar(ToolBarAtas);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -53,5 +63,55 @@ public class KalimantanActivity extends AppCompatActivity {
         sliderLayout.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
         sliderLayout.setCustomAnimation(new DescriptionAnimation());
         sliderLayout.setDuration(4000);
+
+        bNature.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(KalimantanActivity.this, NatureActivity.class);
+                String idKalimantan = "idKalimantan";
+                intent.putExtra("idKalimantan", idKalimantan);
+                startActivity(intent);
+            }
+        });
+
+        bModern.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(KalimantanActivity.this, ModernActivity.class);
+                String idKalimantan = "idKalimantan";
+                intent.putExtra("idKalimantan", idKalimantan);
+                startActivity(intent);
+            }
+        });
+
+        bCulture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(KalimantanActivity.this, CultureActivity.class);
+                String idKalimantan = "idKalimantan";
+                intent.putExtra("idKalimantan", idKalimantan);
+                startActivity(intent);
+            }
+        });
+
+        bCulinary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(KalimantanActivity.this, CulinaryActivity.class);
+                String idKalimantan = "idKalimantan";
+                intent.putExtra("idKalimantan", idKalimantan);
+                startActivity(intent);
+            }
+        });
+
+        bEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(KalimantanActivity.this, EventActivity.class);
+                String idKalimantan = "idKalimantan";
+                intent.putExtra("idKalimantan", idKalimantan);
+                startActivity(intent);
+            }
+        });
     }
 }
