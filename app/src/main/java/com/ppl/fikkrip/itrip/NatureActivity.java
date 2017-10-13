@@ -90,9 +90,9 @@ public class NatureActivity extends AppCompatActivity{
                 }
             }
         };
-        NatureRequest natureRequest = new NatureRequest(idPulau, url, responseListener);
+        ProvinsiRequest provinsiRequest = new ProvinsiRequest(idPulau, url, responseListener);
         RequestQueue queue = Volley.newRequestQueue(NatureActivity.this);
-        queue.add(natureRequest);
+        queue.add(provinsiRequest);
     }
 
     private void getProvinsi(JSONArray j){

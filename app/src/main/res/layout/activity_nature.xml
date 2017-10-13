@@ -43,19 +43,20 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
             android:text="Provinsi: "
             android:textStyle="bold"
             android:id="@+id/textView"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="17dp"
-            android:padding="15dp"/>
+            android:padding="10dp"/>
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:backgroundTint="@color/colorPrimary"
             android:paddingTop="15dp"
