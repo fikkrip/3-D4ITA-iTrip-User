@@ -1,8 +1,11 @@
-package com.ppl.fikkrip.itrip;
+package com.ppl.fikkrip.itrip.controller.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.ppl.fikkrip.itrip.R;
+import com.ppl.fikkrip.itrip.sharedpreference.SessionManager;
 
 /**
  * Activity Splash berhubungan dengan apa yang ada pada layout activity_login

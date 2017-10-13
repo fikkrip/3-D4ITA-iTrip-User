@@ -1,8 +1,10 @@
-package com.ppl.fikkrip.itrip;
+package com.ppl.fikkrip.itrip.sharedpreference;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+
+import com.ppl.fikkrip.itrip.controller.activity.LoginActivity;
 
 import java.util.HashMap;
 

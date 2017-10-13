@@ -1,11 +1,11 @@
-package com.ppl.fikkrip.itrip;
+package com.ppl.fikkrip.itrip.controller.activity;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
@@ -14,18 +14,19 @@ import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.ppl.fikkrip.itrip.R;
 
 import java.util.HashMap;
 
-public class JawaActivity extends AppCompatActivity {
+public class PapuaActivity extends AppCompatActivity {
 
-    SliderLayout sliderLayout;
+    private SliderLayout sliderLayout;
     private Button bNature, bModern, bCulture, bCulinary, bEvent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jawa);
+        setContentView(R.layout.activity_papua);
 
         sliderLayout = (SliderLayout) findViewById(R.id.slider);
         Toolbar ToolBarAtas = (Toolbar)findViewById(R.id.toolbar);
@@ -38,14 +39,14 @@ public class JawaActivity extends AppCompatActivity {
         setSupportActionBar(ToolBarAtas);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.abc_ic_ab_back_material);
+        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.ic_arrow_back);
         upArrow.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
         HashMap<String,Integer> file_maps = new HashMap<>();
-        file_maps.put("Kawah Ijen",R.drawable.kawahijen);
-        file_maps.put("Nasi Pecel, Makanan Khas Provinsi Jawa",R.drawable.pecel);
-        file_maps.put("Candi Borobudur",R.drawable.borobudur);
+        file_maps.put("Kepulauan Raja Ampat",R.drawable.rajaampat);
+        file_maps.put("Papeda, Makanan Khas Papua",R.drawable.papeda);
+        file_maps.put("Honai, Rumah Adat Papua",R.drawable.honaijpg);
         for(String name : file_maps.keySet()){
             TextSliderView textSliderView = new TextSliderView(this);
             // initialize a SliderLayout
@@ -67,9 +68,11 @@ public class JawaActivity extends AppCompatActivity {
         bNature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(JawaActivity.this, NatureActivity.class);
-                String idJawa = "idJawa";
-                intent.putExtra("idJawa", idJawa);
+                Intent intent = new Intent(PapuaActivity.this, NatureActivity.class);
+                String idPapua = "idPapua";
+                String idKategori = "alam";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idPapua", idPapua);
                 startActivity(intent);
             }
         });
@@ -77,9 +80,11 @@ public class JawaActivity extends AppCompatActivity {
         bModern.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(JawaActivity.this, ModernActivity.class);
-                String idJawa = "idJawa";
-                intent.putExtra("idJawa", idJawa);
+                Intent intent = new Intent(PapuaActivity.this, ModernActivity.class);
+                String idPapua = "idPapua";
+                String idKategori = "modern";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idPapua", idPapua);
                 startActivity(intent);
             }
         });
@@ -87,9 +92,11 @@ public class JawaActivity extends AppCompatActivity {
         bCulture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(JawaActivity.this, CultureActivity.class);
-                String idJawa = "idJawa";
-                intent.putExtra("idJawa", idJawa);
+                Intent intent = new Intent(PapuaActivity.this, CultureActivity.class);
+                String idPapua = "idPapua";
+                String idKategori = "budaya";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idPapua", idPapua);
                 startActivity(intent);
             }
         });
@@ -97,9 +104,11 @@ public class JawaActivity extends AppCompatActivity {
         bCulinary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(JawaActivity.this, CulinaryActivity.class);
-                String idJawa = "idJawa";
-                intent.putExtra("idJawa", idJawa);
+                Intent intent = new Intent(PapuaActivity.this, CulinaryActivity.class);
+                String idPapua = "idPapua";
+                String idKategori = "kuliner";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idPapua", idPapua);
                 startActivity(intent);
             }
         });
@@ -107,9 +116,11 @@ public class JawaActivity extends AppCompatActivity {
         bEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(JawaActivity.this, EventActivity.class);
-                String idJawa = "idJawa";
-                intent.putExtra("idJawa", idJawa);
+                Intent intent = new Intent(PapuaActivity.this, EventActivity.class);
+                String idPapua = "idPapua";
+                String idKategori = "event";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idPapua", idPapua);
                 startActivity(intent);
             }
         });

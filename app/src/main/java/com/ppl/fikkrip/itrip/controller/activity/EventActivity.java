@@ -1,4 +1,4 @@
-package com.ppl.fikkrip.itrip;
+package com.ppl.fikkrip.itrip.controller.activity;
 
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -6,6 +6,8 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+
+import com.ppl.fikkrip.itrip.R;
 
 public class EventActivity extends AppCompatActivity {
 

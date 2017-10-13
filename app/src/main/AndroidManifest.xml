@@ -11,81 +11,85 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".controller.activity.MainActivity" />
+        <activity android:name=".controller.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".controller.activity.RegisterActivity" />
+        <activity android:name=".controller.activity.LoginActivity" />
         <activity
-            android:name=".SumateraActivity"
-            android:parentActivityName=".MainActivity">
+            android:name=".controller.activity.SumateraActivity"
+            android:parentActivityName=".controller.activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
-            android:name=".KalimantanActivity"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".controller.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".SulawesiActivity"
-            android:parentActivityName=".MainActivity">
+            android:name=".controller.activity.KalimantanActivity"
+            android:parentActivityName=".controller.activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".controller.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".JawaActivity"
-            android:parentActivityName=".MainActivity">
+            android:name=".controller.activity.SulawesiActivity"
+            android:parentActivityName=".controller.activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".controller.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".PapuaActivity"
-            android:parentActivityName=".MainActivity">
+            android:name=".controller.activity.JawaActivity"
+            android:parentActivityName=".controller.activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".controller.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".NatureActivity"
-            android:parentActivityName=".SumateraActivity">
+            android:name=".controller.activity.PapuaActivity"
+            android:parentActivityName=".controller.activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SumateraActivity" />
+                android:value=".controller.activity.MainActivity" />
         </activity>
-        <activity android:name=".ModernActivity"
-            android:parentActivityName=".SumateraActivity">
+        <activity
+            android:name=".controller.activity.NatureActivity"
+            android:parentActivityName=".controller.activity.SumateraActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SumateraActivity" />
+                android:value=".controller.activity.MainActivity" />
         </activity>
-        <activity android:name=".CultureActivity"
-            android:parentActivityName=".SumateraActivity">
+        <activity
+            android:name=".controller.activity.CultureActivity"
+            android:parentActivityName=".controller.activity.SumateraActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SumateraActivity" />
+                android:value=".controller.activity.MainActivity" />
         </activity>
-        <activity android:name=".CulinaryActivity"
-            android:parentActivityName=".SumateraActivity">
+        <activity
+            android:name=".controller.activity.CulinaryActivity"
+            android:parentActivityName=".controller.activity.SumateraActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SumateraActivity" />
+                android:value=".controller.activity.MainActivity" />
         </activity>
-        <activity android:name=".EventActivity">
-            android:parentActivityName=".SumateraActivity">
+        <activity
+            android:name=".controller.activity.ModernActivity"
+            android:parentActivityName=".controller.activity.SumateraActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SumateraActivity" />
+                android:value=".controller.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".controller.activity.EventActivity"
+            android:parentActivityName=".controller.activity.SumateraActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controller.activity.MainActivity" />
         </activity>
     </application>
 

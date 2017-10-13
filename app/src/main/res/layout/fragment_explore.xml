@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ppl.fikkrip.itrip.ExploreFragment">
+    tools:context="com.ppl.fikkrip.itrip.controller.fragment.ExploreFragment">
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -84,12 +84,12 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="10dp"
+        android:textSize="10sp"
         android:drawablePadding="2dp"
         android:textStyle="normal"
         android:textColor="@color/colorPrimaryDark"
         android:text="Click The Island for Details!"
-        android:drawableLeft="@drawable/ic_alert"
+        android:drawableLeft="@drawable/ic_info"
         android:gravity="center_vertical"
         android:layout_marginTop="18dp"
         android:layout_below="@+id/imageJawa"

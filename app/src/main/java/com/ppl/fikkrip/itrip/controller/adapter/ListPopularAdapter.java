@@ -1,4 +1,4 @@
-package com.ppl.fikkrip.itrip;
+package com.ppl.fikkrip.itrip.controller.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,16 +13,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.ppl.fikkrip.itrip.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
+public class ListPopularAdapter extends RecyclerView.Adapter<ListPopularAdapter.ViewHolder>{
 
     Context c;
     ArrayList<HashMap<String, String>> list_data;
 
-    public RecyclerViewAdapter(Context con, ArrayList<HashMap<String, String>> list_data) {
+    public ListPopularAdapter(Context con, ArrayList<HashMap<String, String>> list_data) {
             this.c = con;
             this.list_data = list_data;
     }

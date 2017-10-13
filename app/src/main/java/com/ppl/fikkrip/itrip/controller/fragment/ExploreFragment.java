@@ -1,4 +1,4 @@
-package com.ppl.fikkrip.itrip;
+package com.ppl.fikkrip.itrip.controller.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +18,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.ppl.fikkrip.itrip.R;
+import com.ppl.fikkrip.itrip.controller.activity.JawaActivity;
+import com.ppl.fikkrip.itrip.controller.activity.KalimantanActivity;
+import com.ppl.fikkrip.itrip.controller.activity.PapuaActivity;
+import com.ppl.fikkrip.itrip.controller.adapter.ListPopularAdapter;
+import com.ppl.fikkrip.itrip.controller.activity.SulawesiActivity;
+import com.ppl.fikkrip.itrip.controller.activity.SumateraActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -110,7 +117,7 @@ public class ExploreFragment extends Fragment {
                         map.put("lokasiWisata", json.getString("lokasiWisata"));
                         map.put("gambarWisata", json.getString("gambarWisata"));
                         list_data.add(map);
-                        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getContext(), list_data);
+                        ListPopularAdapter adapter = new ListPopularAdapter(getContext(), list_data);
                         lvhape.setAdapter(adapter);
                     }
                 } catch (JSONException e) {

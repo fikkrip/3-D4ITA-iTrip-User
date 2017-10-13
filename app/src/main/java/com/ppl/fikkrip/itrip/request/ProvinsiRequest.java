@@ -1,4 +1,4 @@
-package com.ppl.fikkrip.itrip;
+package com.ppl.fikkrip.itrip.request;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -17,6 +17,13 @@ public class ProvinsiRequest extends StringRequest {
         super(Request.Method.POST, url, listener, null);
         params = new HashMap<>();
         params.put("idPulau", idPulau);
+    }
+
+    public ProvinsiRequest(String idProvinsi, String idKategori, String url, Response.Listener<String> listener) {
+        super(Request.Method.POST, url, listener, null);
+        params = new HashMap<>();
+        params.put("idProvinsi", idProvinsi);
+        params.put("idKategori", idKategori);
     }
 
     @Override

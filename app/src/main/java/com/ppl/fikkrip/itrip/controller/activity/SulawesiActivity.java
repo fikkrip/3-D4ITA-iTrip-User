@@ -1,11 +1,11 @@
-package com.ppl.fikkrip.itrip;
+package com.ppl.fikkrip.itrip.controller.activity;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
@@ -14,10 +14,11 @@ import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.ppl.fikkrip.itrip.R;
 
 import java.util.HashMap;
 
-public class SumateraActivity extends AppCompatActivity {
+public class SulawesiActivity extends AppCompatActivity {
 
     private SliderLayout sliderLayout;
     private Button bNature, bModern, bCulture, bCulinary, bEvent;
@@ -25,10 +26,10 @@ public class SumateraActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sumatera);
+        setContentView(R.layout.activity_sulawesi);
 
         sliderLayout = (SliderLayout) findViewById(R.id.slider);
-        Toolbar ToolBarAtas = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar ToolBarAtas = (Toolbar)findViewById(R.id.toolbar);
         bNature = (Button) findViewById(R.id.nature);
         bModern = (Button) findViewById(R.id.modern);
         bCulture = (Button) findViewById(R.id.culture);
@@ -38,14 +39,14 @@ public class SumateraActivity extends AppCompatActivity {
         setSupportActionBar(ToolBarAtas);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.abc_ic_ab_back_material);
+        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.ic_arrow_back);
         upArrow.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
         HashMap<String,Integer> file_maps = new HashMap<>();
-        file_maps.put("Jembatan Ampera",R.drawable.ampera);
-        file_maps.put("Rendang, Makanan Khas Sumatera",R.drawable.rendang);
-        file_maps.put("Danau Toba",R.drawable.danautoba);
+        file_maps.put("Taman Nasional Wakatobi",R.drawable.wakatobi);
+        file_maps.put("Coto Makassar, Makanan Khas Sulawesi",R.drawable.cotomakassar);
+        file_maps.put("Pantai Losari",R.drawable.pantailosari);
         for(String name : file_maps.keySet()){
             TextSliderView textSliderView = new TextSliderView(this);
             // initialize a SliderLayout
@@ -67,9 +68,11 @@ public class SumateraActivity extends AppCompatActivity {
         bNature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SumateraActivity.this, NatureActivity.class);
-                String idSumatera = "idSumatera";
-                intent.putExtra("idSumatera", idSumatera);
+                Intent intent = new Intent(SulawesiActivity.this, NatureActivity.class);
+                String idSulawesi = "idSulawesi";
+                String idKategori = "alam";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idSulawesi", idSulawesi);
                 startActivity(intent);
             }
         });
@@ -77,9 +80,11 @@ public class SumateraActivity extends AppCompatActivity {
         bModern.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SumateraActivity.this, ModernActivity.class);
-                String idSumatera = "idSumatera";
-                intent.putExtra("idSumatera", idSumatera);
+                Intent intent = new Intent(SulawesiActivity.this, ModernActivity.class);
+                String idSulawesi = "idSulawesi";
+                String idKategori = "modern";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idSulawesi", idSulawesi);
                 startActivity(intent);
             }
         });
@@ -87,9 +92,11 @@ public class SumateraActivity extends AppCompatActivity {
         bCulture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SumateraActivity.this, CultureActivity.class);
-                String idSumatera = "idSumatera";
-                intent.putExtra("idSumatera", idSumatera);
+                Intent intent = new Intent(SulawesiActivity.this, CultureActivity.class);
+                String idSulawesi = "idSulawesi";
+                String idKategori = "budaya";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idSulawesi", idSulawesi);
                 startActivity(intent);
             }
         });
@@ -97,9 +104,11 @@ public class SumateraActivity extends AppCompatActivity {
         bCulinary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SumateraActivity.this, CulinaryActivity.class);
-                String idSumatera = "idSumatera";
-                intent.putExtra("idSumatera", idSumatera);
+                Intent intent = new Intent(SulawesiActivity.this, CulinaryActivity.class);
+                String idSulawesi = "idSulawesi";
+                String idKategori = "kuliner";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idSulawesi", idSulawesi);
                 startActivity(intent);
             }
         });
@@ -107,9 +116,11 @@ public class SumateraActivity extends AppCompatActivity {
         bEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SumateraActivity.this, EventActivity.class);
-                String idSumatera = "idSumatera";
-                intent.putExtra("idSumatera", idSumatera);
+                Intent intent = new Intent(SulawesiActivity.this, EventActivity.class);
+                String idSulawesi = "idSulawesi";
+                String idKategori = "event";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idSulawesi", idSulawesi);
                 startActivity(intent);
             }
         });

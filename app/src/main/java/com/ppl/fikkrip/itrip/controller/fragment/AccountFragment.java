@@ -1,4 +1,4 @@
-package com.ppl.fikkrip.itrip;
+package com.ppl.fikkrip.itrip.controller.fragment;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.ppl.fikkrip.itrip.R;
+import com.ppl.fikkrip.itrip.sharedpreference.SessionManager;
 
 import java.util.HashMap;
 

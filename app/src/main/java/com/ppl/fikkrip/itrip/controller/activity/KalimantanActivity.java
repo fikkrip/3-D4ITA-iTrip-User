@@ -1,4 +1,4 @@
-package com.ppl.fikkrip.itrip;
+package com.ppl.fikkrip.itrip.controller.activity;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
@@ -14,18 +14,19 @@ import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.ppl.fikkrip.itrip.R;
 
 import java.util.HashMap;
 
-public class PapuaActivity extends AppCompatActivity {
+public class KalimantanActivity extends AppCompatActivity {
 
-    private SliderLayout sliderLayout;
+    SliderLayout sliderLayout;
     private Button bNature, bModern, bCulture, bCulinary, bEvent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_papua);
+        setContentView(R.layout.activity_kalimantan);
 
         sliderLayout = (SliderLayout) findViewById(R.id.slider);
         Toolbar ToolBarAtas = (Toolbar)findViewById(R.id.toolbar);
@@ -38,14 +39,14 @@ public class PapuaActivity extends AppCompatActivity {
         setSupportActionBar(ToolBarAtas);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.abc_ic_ab_back_material);
+        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.ic_arrow_back);
         upArrow.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
         HashMap<String,Integer> file_maps = new HashMap<>();
-        file_maps.put("Kepulauan Raja Ampat",R.drawable.rajaampat);
-        file_maps.put("Papeda, Makanan Khas Papua",R.drawable.papeda);
-        file_maps.put("Honai, Rumah Adat Papua",R.drawable.honaijpg);
+        file_maps.put("Pantai Kijing",R.drawable.pantaikijing);
+        file_maps.put("Soto Banjar, Makanan Khas Kalimantan",R.drawable.sotobanjar);
+        file_maps.put("Dayak, Suku Asli Kalimantan",R.drawable.sukudayak);
         for(String name : file_maps.keySet()){
             TextSliderView textSliderView = new TextSliderView(this);
             // initialize a SliderLayout
@@ -67,9 +68,11 @@ public class PapuaActivity extends AppCompatActivity {
         bNature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PapuaActivity.this, NatureActivity.class);
-                String idPapua = "idPapua";
-                intent.putExtra("idPapua", idPapua);
+                Intent intent = new Intent(KalimantanActivity.this, NatureActivity.class);
+                String idKalimantan = "idKalimantan";
+                String idKategori = "alam";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idKalimantan", idKalimantan);
                 startActivity(intent);
             }
         });
@@ -77,9 +80,11 @@ public class PapuaActivity extends AppCompatActivity {
         bModern.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PapuaActivity.this, ModernActivity.class);
-                String idPapua = "idPapua";
-                intent.putExtra("idPapua", idPapua);
+                Intent intent = new Intent(KalimantanActivity.this, ModernActivity.class);
+                String idKalimantan = "idKalimantan";
+                String idKategori = "modern";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idKalimantan", idKalimantan);
                 startActivity(intent);
             }
         });
@@ -87,9 +92,11 @@ public class PapuaActivity extends AppCompatActivity {
         bCulture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PapuaActivity.this, CultureActivity.class);
-                String idPapua = "idPapua";
-                intent.putExtra("idPapua", idPapua);
+                Intent intent = new Intent(KalimantanActivity.this, CultureActivity.class);
+                String idKalimantan = "idKalimantan";
+                String idKategori = "budaya";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idKalimantan", idKalimantan);
                 startActivity(intent);
             }
         });
@@ -97,9 +104,11 @@ public class PapuaActivity extends AppCompatActivity {
         bCulinary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PapuaActivity.this, CulinaryActivity.class);
-                String idPapua = "idPapua";
-                intent.putExtra("idPapua", idPapua);
+                Intent intent = new Intent(KalimantanActivity.this, CulinaryActivity.class);
+                String idKalimantan = "idKalimantan";
+                String idKategori = "kuliner";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idKalimantan", idKalimantan);
                 startActivity(intent);
             }
         });
@@ -107,9 +116,11 @@ public class PapuaActivity extends AppCompatActivity {
         bEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PapuaActivity.this, EventActivity.class);
-                String idPapua = "idPapua";
-                intent.putExtra("idPapua", idPapua);
+                Intent intent = new Intent(KalimantanActivity.this, EventActivity.class);
+                String idKalimantan = "idKalimantan";
+                String idKategori = "event";
+                intent.putExtra("idKategori",idKategori);
+                intent.putExtra("idKalimantan", idKalimantan);
                 startActivity(intent);
             }
         });

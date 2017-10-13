@@ -1,4 +1,4 @@
-package com.ppl.fikkrip.itrip;
+package com.ppl.fikkrip.itrip.controller.activity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -17,6 +17,8 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.ppl.fikkrip.itrip.R;
+import com.ppl.fikkrip.itrip.request.RegisterRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -98,6 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     Toast.makeText(getApplicationContext(), "Registrasi Berhasil!", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                     RegisterActivity.this.startActivity(intent);
+                                    finish();
                                 } else {
                                     progressDialog.dismiss();
                                     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);

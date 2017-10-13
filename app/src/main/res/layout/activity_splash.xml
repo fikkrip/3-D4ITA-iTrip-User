@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
-    tools:context="com.ppl.fikkrip.itrip.SplashActivity"
+    tools:context="com.ppl.fikkrip.itrip.controller.activity.SplashActivity"
     android:weightSum="1">
 
     <ImageView

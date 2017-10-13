@@ -1,78 +1,77 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context="com.ppl.fikkrip.itrip.controller.activity.CulinaryActivity">
+
+<android.support.design.widget.AppBarLayout
+    android:id="@+id/appBar"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.ppl.fikkrip.itrip.CulinaryActivity">
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appBar"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:titleTextColor="@color/colorWhite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            app:titleTextColor="@color/colorWhite"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary">
-
-            <TextView
-                android:id="@+id/toolbar_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-                android:text="@string/culinary"
-                android:textSize="25sp"
-                android:textColor="#FFF"
-                android:textStyle="bold"
-                android:layout_gravity="center"/>
-
-        </android.support.v7.widget.Toolbar>
-
-    </android.support.design.widget.AppBarLayout>
-
-    <LinearLayout
-        android:id="@+id/spinner_area"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/appBar"
-        android:orientation="horizontal">
+        android:background="@color/colorPrimary">
 
         <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="Provinsi: "
-            android:textStyle="bold"
-            android:id="@+id/textView"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="17dp"
-            android:padding="15dp"/>
-
-        <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:backgroundTint="@color/colorPrimary"
-            android:entries="@array/prov_sumatera"
-            android:paddingTop="15dp"
-            android:paddingRight="15dp"
-            android:paddingBottom="15dp"
-            android:layout_centerHorizontal="true" />
-    </LinearLayout>
+            style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:text="@string/culinary"
+            android:textSize="25sp"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.AppBarLayout>
+
+<LinearLayout
+    android:id="@+id/spinner_area"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/appBar"
+    android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/uCon"
+        android:id="@+id/textView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:text="Provinsi: "
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ucon"
-        android:layout_marginTop="30dp"
-        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-        android:textAlignment="center"
-        android:layout_below="@+id/spinner_area"
-        android:layout_centerHorizontal="true" />
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:backgroundTint="@color/colorPrimary"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" />
+</LinearLayout>
+
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/listwisata"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="125dp"
+    android:background="#edf1f2"
+    />
 </RelativeLayout>

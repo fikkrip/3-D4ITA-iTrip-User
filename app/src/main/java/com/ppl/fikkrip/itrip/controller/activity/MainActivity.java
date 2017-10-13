@@ -1,4 +1,4 @@
-package com.ppl.fikkrip.itrip;
+package com.ppl.fikkrip.itrip.controller.activity;
 
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -9,6 +9,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+
+import com.ppl.fikkrip.itrip.R;
+import com.ppl.fikkrip.itrip.controller.fragment.AccountFragment;
+import com.ppl.fikkrip.itrip.controller.fragment.ExploreFragment;
+import com.ppl.fikkrip.itrip.controller.fragment.MyTripFragment;
+import com.ppl.fikkrip.itrip.controller.fragment.NearMeFragment;
 
 public class MainActivity extends AppCompatActivity{
     private VPMainAdapter fragmentPagerAdapter;
