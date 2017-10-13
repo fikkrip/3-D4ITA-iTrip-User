@@ -1,4 +1,4 @@
-package com.ppl.fikkrip.itrip.request;
+package com.ppl.fikkrip.itrip.rest;
 
 import com.android.volley.Request;
 import com.android.volley.Response;

@@ -18,7 +18,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.ppl.fikkrip.itrip.R;
-import com.ppl.fikkrip.itrip.request.RegisterRequest;
+import com.ppl.fikkrip.itrip.rest.RegisterRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;

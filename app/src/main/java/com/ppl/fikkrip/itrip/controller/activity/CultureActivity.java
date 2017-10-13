@@ -17,7 +17,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.ppl.fikkrip.itrip.controller.adapter.ListWisataAdapter;
-import com.ppl.fikkrip.itrip.request.ProvinsiRequest;
+import com.ppl.fikkrip.itrip.rest.ProvinsiRequest;
 import com.ppl.fikkrip.itrip.R;
 
 import org.json.JSONArray;
