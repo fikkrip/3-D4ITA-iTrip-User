@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/Ex"
     tools:context="com.ppl.fikkrip.itrip.ExploreFragment">
 
     <ImageButton
@@ -56,7 +57,12 @@
         android:layout_toRightOf="@+id/imageSumatra"
         android:layout_toEndOf="@+id/imageSumatra" />
 
-
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tampilkan Popup Window"
+        />
 
     <TextView
         android:layout_width="match_parent"

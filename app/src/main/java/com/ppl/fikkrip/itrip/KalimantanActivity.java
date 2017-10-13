@@ -38,7 +38,7 @@ public class KalimantanActivity extends AppCompatActivity {
         setSupportActionBar(ToolBarAtas);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.abc_ic_ab_back_material);
+        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.ic_arrow_back);
         upArrow.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
@@ -69,6 +69,8 @@ public class KalimantanActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(KalimantanActivity.this, NatureActivity.class);
                 String idKalimantan = "idKalimantan";
+                String idKategori = "alam";
+                intent.putExtra("idKategori",idKategori);
                 intent.putExtra("idKalimantan", idKalimantan);
                 startActivity(intent);
             }
@@ -79,6 +81,8 @@ public class KalimantanActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(KalimantanActivity.this, ModernActivity.class);
                 String idKalimantan = "idKalimantan";
+                String idKategori = "modern";
+                intent.putExtra("idKategori",idKategori);
                 intent.putExtra("idKalimantan", idKalimantan);
                 startActivity(intent);
             }
@@ -89,6 +93,8 @@ public class KalimantanActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(KalimantanActivity.this, CultureActivity.class);
                 String idKalimantan = "idKalimantan";
+                String idKategori = "budaya";
+                intent.putExtra("idKategori",idKategori);
                 intent.putExtra("idKalimantan", idKalimantan);
                 startActivity(intent);
             }
@@ -99,6 +105,8 @@ public class KalimantanActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(KalimantanActivity.this, CulinaryActivity.class);
                 String idKalimantan = "idKalimantan";
+                String idKategori = "kuliner";
+                intent.putExtra("idKategori",idKategori);
                 intent.putExtra("idKalimantan", idKalimantan);
                 startActivity(intent);
             }
@@ -109,6 +117,8 @@ public class KalimantanActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(KalimantanActivity.this, EventActivity.class);
                 String idKalimantan = "idKalimantan";
+                String idKategori = "event";
+                intent.putExtra("idKategori",idKategori);
                 intent.putExtra("idKalimantan", idKalimantan);
                 startActivity(intent);
             }

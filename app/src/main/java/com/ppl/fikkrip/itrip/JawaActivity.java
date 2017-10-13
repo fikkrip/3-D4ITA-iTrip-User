@@ -38,7 +38,7 @@ public class JawaActivity extends AppCompatActivity {
         setSupportActionBar(ToolBarAtas);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.abc_ic_ab_back_material);
+        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.ic_arrow_back);
         upArrow.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
@@ -69,7 +69,9 @@ public class JawaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(JawaActivity.this, NatureActivity.class);
                 String idJawa = "idJawa";
+                String idKategori = "alam";
                 intent.putExtra("idJawa", idJawa);
+                intent.putExtra("idKategori", idKategori);
                 startActivity(intent);
             }
         });
@@ -79,7 +81,9 @@ public class JawaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(JawaActivity.this, ModernActivity.class);
                 String idJawa = "idJawa";
+                String idKategori = "modern";
                 intent.putExtra("idJawa", idJawa);
+                intent.putExtra("idKategori", idKategori);
                 startActivity(intent);
             }
         });
@@ -89,7 +93,9 @@ public class JawaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(JawaActivity.this, CultureActivity.class);
                 String idJawa = "idJawa";
+                String idKategori = "budaya";
                 intent.putExtra("idJawa", idJawa);
+                intent.putExtra("idKategori", idKategori);
                 startActivity(intent);
             }
         });
@@ -99,7 +105,9 @@ public class JawaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(JawaActivity.this, CulinaryActivity.class);
                 String idJawa = "idJawa";
+                String idKategori = "kuliner";
                 intent.putExtra("idJawa", idJawa);
+                intent.putExtra("idKategori", idKategori);
                 startActivity(intent);
             }
         });

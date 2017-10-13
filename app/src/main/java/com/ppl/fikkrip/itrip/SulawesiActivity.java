@@ -38,7 +38,7 @@ public class SulawesiActivity extends AppCompatActivity {
         setSupportActionBar(ToolBarAtas);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.abc_ic_ab_back_material);
+        final Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.ic_arrow_back);
         upArrow.setColorFilter(ContextCompat.getColor(this, R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
@@ -69,6 +69,8 @@ public class SulawesiActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SulawesiActivity.this, NatureActivity.class);
                 String idSulawesi = "idSulawesi";
+                String idKategori = "alam";
+                intent.putExtra("idKategori",idKategori);
                 intent.putExtra("idSulawesi", idSulawesi);
                 startActivity(intent);
             }
@@ -79,6 +81,8 @@ public class SulawesiActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SulawesiActivity.this, ModernActivity.class);
                 String idSulawesi = "idSulawesi";
+                String idKategori = "modern";
+                intent.putExtra("idKategori",idKategori);
                 intent.putExtra("idSulawesi", idSulawesi);
                 startActivity(intent);
             }
@@ -89,6 +93,8 @@ public class SulawesiActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SulawesiActivity.this, CultureActivity.class);
                 String idSulawesi = "idSulawesi";
+                String idKategori = "budaya";
+                intent.putExtra("idKategori",idKategori);
                 intent.putExtra("idSulawesi", idSulawesi);
                 startActivity(intent);
             }
@@ -99,6 +105,8 @@ public class SulawesiActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SulawesiActivity.this, CulinaryActivity.class);
                 String idSulawesi = "idSulawesi";
+                String idKategori = "kuliner";
+                intent.putExtra("idKategori",idKategori);
                 intent.putExtra("idSulawesi", idSulawesi);
                 startActivity(intent);
             }
@@ -109,6 +117,8 @@ public class SulawesiActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SulawesiActivity.this, EventActivity.class);
                 String idSulawesi = "idSulawesi";
+                String idKategori = "event";
+                intent.putExtra("idKategori",idKategori);
                 intent.putExtra("idSulawesi", idSulawesi);
                 startActivity(intent);
             }

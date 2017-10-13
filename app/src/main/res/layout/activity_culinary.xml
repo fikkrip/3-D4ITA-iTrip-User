@@ -64,15 +64,26 @@
             android:paddingBottom="15dp"
             android:layout_centerHorizontal="true" />
     </LinearLayout>
-
     <TextView
-        android:id="@+id/uCon"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ucon"
-        android:layout_marginTop="30dp"
-        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-        android:textAlignment="center"
-        android:layout_below="@+id/spinner_area"
-        android:layout_centerHorizontal="true" />
+        android:text="Popular"
+        android:padding="5dp"
+        android:paddingBottom="5dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:id="@+id/txtjudul"
+        android:background="#edf1f2"
+        android:layout_below="@id/spinner_area"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listwisata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="180dp"
+        android:background="#edf1f2"
+        />
 </RelativeLayout>

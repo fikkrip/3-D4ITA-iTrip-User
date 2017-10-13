@@ -23,7 +23,7 @@ import java.util.HashMap;
 
 import static android.R.attr.name;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
+public class ListWisata extends RecyclerView.Adapter<ListWisata.ViewHolder>{
 
     Context c;
     ArrayList<HashMap<String, String>> list_data;
@@ -48,15 +48,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             mRelativeLayout = (RelativeLayout) itemView.findViewById(R.id.Ex);
         }
     }
-    public RecyclerViewAdapter(Context con, ArrayList<HashMap<String, String>> list_data) {
-            this.c = con;
-            this.list_data = list_data;
+    public ListWisata(Context con, ArrayList<HashMap<String, String>> list_data) {
+        this.c = con;
+        this.list_data = list_data;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_popular, null);
-            return new ViewHolder(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_popular, null);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -65,17 +65,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 .load("http://192.168.43.191/i-Trip/img/" + list_data.get(position).get("gambarWisata")).crossFade()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(holder.imghape);
-                holder.txtWisata.setText(list_data.get(position).get("namaWisata"));
-                holder.txtLokasi.setText(list_data.get(position).get("lokasiWisata"));
-
-
-
+        holder.txtWisata.setText(list_data.get(position).get("namaWisata"));
+        holder.txtLokasi.setText(list_data.get(position).get("lokasiWisata"));
     }
 
     @Override
     public int getItemCount() {
-            return list_data.size();
-            }
+        return list_data.size();
+    }
 
 
 }
