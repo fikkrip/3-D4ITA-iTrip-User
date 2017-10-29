@@ -103,9 +103,13 @@ public class NatureActivity extends AppCompatActivity {
                 }
             }
         };
+<<<<<<< HEAD
         NatureRequest natureRequest = new NatureRequest(idPulau, url, responseListener2);
+=======
+        ProvinsiRequest provinsiRequest = new ProvinsiRequest(idPulau, url, responseListener);
+>>>>>>> 79e6dfc6cefc4aa54f029476dad64d6fd47378c3
         RequestQueue queue = Volley.newRequestQueue(NatureActivity.this);
-        queue.add(natureRequest);
+        queue.add(provinsiRequest);
     }
 
     private void getProvinsi(JSONArray j) {

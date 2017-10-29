@@ -31,5 +31,6 @@
         <item>Lampung</item>
     </string-array>
 
-    <string name="api">"http://192.168.43.191/i-Trip/rest/"</string>
+    <string name="api">"http://192.168.43.175/i-Trip/rest/"</string>
+    <string name="img">"http://192.168.43.175/i-Trip/img/"</string>
 </resources>

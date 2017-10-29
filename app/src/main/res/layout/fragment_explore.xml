@@ -90,7 +90,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="11dp"
+        android:textSize="10dp"
         android:drawablePadding="2dp"
         android:textStyle="normal"
         android:textColor="@color/colorPrimaryDark"

@@ -153,6 +153,7 @@ public class ExploreFragment extends Fragment {
                         map.put("id", json.getString("idWisata"));
                         map.put("namaProvinsi", json.getString("namaProvinsi"));
                         map.put("namaWisata", json.getString("namaWisata"));
+                        map.put("biayaMasuk", json.getString("biayaMasuk"));
                         map.put("deskripsiWisata", json.getString("deskripsiWisata"));
                         map.put("kategori", json.getString("kategori"));
                         map.put("lokasiWisata", json.getString("lokasiWisata"));

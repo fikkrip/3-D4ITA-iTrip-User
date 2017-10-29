@@ -44,18 +44,31 @@
             android:id="@+id/textView"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_margin="20dp"
             android:padding="15dp"
+=======
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+>>>>>>> 79e6dfc6cefc4aa54f029476dad64d6fd47378c3
             android:text="Provinsi: "
             android:textColor="@color/colorPrimaryDark"
             android:textSize="17dp"
+<<<<<<< HEAD
             android:textStyle="bold" />
+=======
+            android:padding="10dp"/>
+>>>>>>> 79e6dfc6cefc4aa54f029476dad64d6fd47378c3
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_centerHorizontal="true"
+=======
+            android:layout_marginTop="10dp"
+>>>>>>> 79e6dfc6cefc4aa54f029476dad64d6fd47378c3
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/colorPrimary"

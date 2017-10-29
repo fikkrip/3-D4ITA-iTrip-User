@@ -8,10 +8,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Pinky Cindy on 10/13/17.
+ * Created by Fikkri Prasetya on 10/12/2017.
  */
 
-public class NatureRequest extends StringRequest {
+public class ProvinsiRequest extends StringRequest {
     private Map<String, String> params;
     public ProvinsiRequest(String idPulau, String url, Response.Listener<String> listener) {
         super(Request.Method.POST, url, listener, null);
