@@ -18,6 +18,38 @@
     <string name="event">EVENT</string>
     <string name="nature">NATURE</string>
 
-    <string name="api">"http://192.168.43.175/i-Trip/rest/"</string>
-    <string name="img">"http://192.168.43.175/i-Trip/img/"</string>
+    <!--<string name="api">"http://192.168.43.175/i-Trip/rest/"</string>-->
+    <!--<string name="img">"http://192.168.43.175/i-Trip/img/"</string>-->
+
+    <string name="api">"http://192.168.43.191/i-Trip/rest/"</string>
+    <string name="img">"http://192.168.43.191/i-Trip/img/"</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">DONE</string>
+
+    <string name="slide_1_title">Enjoy Your Trip With iTrip</string>
+    <string name="slide_1_desc">Ingin mengunjungi Wisata di Indonesia? Berbagai Wisata Alam, Wisata Kuliner, Wisata Budaya, Wisata Modern dan Berbagai Event tersaji disini. Nikmati perjalanan wisata Anda di seluruh penjuru Indonesia. </string>
+
+    <string name="slide_2_title">Explore Indonesia</string>
+    <string name="slide_2_desc">Terdapat Peta Indonesia yang dapat anda KLIK di setiap pulaunya untuk menjelajari setiap Wisata di berbagai Provinsi yang ada di Pulau Tersebut.</string>
+
+    <string name="slide_3_title">My Trip</string>
+    <string name="slide_3_desc">Anda dapat merencanakan perjalanan dengan menu Planning, History dan Galery yang tersedia di Menu My Trip. Anda juga akan mendapat notifikasi dengan melakukan Planning perjalanan.</string>
+
+    <string name="slide_4_title">Near Me</string>
+    <string name="slide_4_desc">Temukan berbagai Wisata Menarik dan Menawan yang terdapat di Sekitar Anda.</string>
+
+    <string name="slide_5_title">My Account</string>
+    <string name="slide_5_desc">Lihat Informasi Detail Profile Anda dan lakukan Update Foto.</string>
+
+    <string name="slide_6_title">iTrip</string>
+    <string name="slide_6_desc">Berbagai Kemudahan tersedia disini, nikmati perjalanan anda mengelilingi Indonesia.</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
 </resources>

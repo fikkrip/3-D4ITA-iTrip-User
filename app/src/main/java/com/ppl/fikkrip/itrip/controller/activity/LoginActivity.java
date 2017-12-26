@@ -17,8 +17,8 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
-import com.ppl.fikkrip.itrip.rest.LoginRequest;
 import com.ppl.fikkrip.itrip.R;
+import com.ppl.fikkrip.itrip.rest.LoginRequest;
 import com.ppl.fikkrip.itrip.sharedpreference.SessionManager;
 
 import org.json.JSONException;
@@ -88,16 +88,17 @@ public class LoginActivity extends AppCompatActivity{
 
                                 if (success) {
                                     progressDialog.dismiss();
+                                    String idUser = jsonResponse.getString("idUser");
                                     String nama = jsonResponse.getString("nama");
                                     String email = jsonResponse.getString("email");
                                     String username = etUsername.getText().toString();
-
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    intent.putExtra("idUser", idUser);
                                     intent.putExtra("nama", nama);
                                     intent.putExtra("email", email);
                                     intent.putExtra("username", username);
                                     LoginActivity.this.startActivity(intent);
-                                    session.createLoginSession(nama, username, email);
+                                    session.createLoginSession(idUser, nama, username, email);
                                     finish();
                                 } else {
                                     progressDialog.dismiss();

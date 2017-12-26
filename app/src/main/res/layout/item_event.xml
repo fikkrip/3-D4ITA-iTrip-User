@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <com.vipul.hp_hp.timelineview.TimelineView
+                android:paddingLeft="30dp"
+                app:marker="@drawable/ic_timelinedua"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:marker_size="20dp"
+                app:line_size="1dp"
+                app:line="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/txt_bulan"
+                android:textColor="@color/colorPrimary"
+                android:text="16 PM"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp">
+                <TextView
+                    android:id="@+id/txt_event"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:paddingLeft="20dp"
+                    android:text="Festival Tambora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/txt_lokasi"
+                    android:textSize="15sp"
+                    android:paddingLeft="20dp"
+                    android:text="Sumatera Utara"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

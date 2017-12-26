@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:titleTextColor="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                android:textSize="25sp"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:layout_gravity="start" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:layout_below="@+id/appBar">
+
+        <Button
+            android:id="@+id/nature"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:background="@drawable/naturenew"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            android:id="@+id/modern"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:background="@drawable/modernnew"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            android:id="@+id/culture"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:background="@drawable/culturenew"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            android:id="@+id/culinary"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:background="@drawable/culinarynew"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            android:id="@+id/event"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:background="@drawable/eventnew"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,99 +1,68 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
     tools:context="com.ppl.fikkrip.itrip.controller.fragment.ExploreFragment">
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:src="@drawable/sumatra"
-        android:id="@+id/imageSumatra"
-        android:layout_below="@+id/appBar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="33dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:src="@drawable/papua"
-        android:id="@+id/imagePapua"
-        android:layout_alignBottom="@+id/imageSumatra"
-        android:layout_toRightOf="@+id/imageSulawesi"
-        android:layout_toEndOf="@+id/imageSulawesi" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:src="@drawable/kalimantan"
-        android:id="@+id/imageKalimantan"
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/appBar"
-        android:layout_toRightOf="@+id/imageSumatra"
-        android:layout_toEndOf="@+id/imageSumatra" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:src="@drawable/sulawesi"
-        android:id="@+id/imageSulawesi"
-        android:layout_alignTop="@+id/imageSumatra"
-        android:layout_toRightOf="@+id/imageKalimantan"
-        android:layout_toEndOf="@+id/imageKalimantan" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:src="@drawable/jawa"
-        android:id="@+id/imageJawa"
-        android:layout_below="@+id/imageKalimantan"
-        android:layout_toRightOf="@+id/imageSumatra"
-        android:layout_toEndOf="@+id/imageSumatra" />
-
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Popular"
-        android:layout_marginTop="200dp"
-        android:padding="5dp"
-        android:paddingBottom="5dp"
-        android:textStyle="bold"
-        android:textSize="16dp"
-        android:background="#edf1f2"
-        />
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/lvhape"
-        android:layout_width="match_parent"
+    <LinearLayout
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="230dp"
-        android:background="#edf1f2"
-        />
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+        <TextView
+            android:id="@+id/tv_choose"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:text="Choose the Island for Details!"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:padding="10dp"/>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="10sp"
-        android:drawablePadding="2dp"
-        android:textStyle="normal"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="Click The Island for Details!"
-        android:drawableLeft="@drawable/ic_info"
-        android:gravity="center_vertical"
-        android:layout_marginTop="18dp"
-        android:layout_below="@+id/imageJawa"
-        android:layout_toRightOf="@+id/imageKalimantan"
-        android:layout_toEndOf="@+id/imageKalimantan" />
+        <LinearLayout
+            android:id="@+id/layout_slider"
+            android:background="#edf1f2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:layout_below="@+id/tv_choose">
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
 
+        <TextView
+            android:id="@+id/tv_popular"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:text="Top Destination"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:layout_below="@+id/layout_slider"/>
+
+        <LinearLayout
+            android:id="@+id/layout_list"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="34"
+            android:gravity="center"
+            android:layout_below="@+id/tv_popular">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lvhape"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#edf1f2"
+                android:paddingBottom="5dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>

@@ -19,11 +19,12 @@ public class ProvinsiRequest extends StringRequest {
         params.put("idPulau", idPulau);
     }
 
-    public ProvinsiRequest(String idProvinsi, String idKategori, String url, Response.Listener<String> listener) {
+    public ProvinsiRequest(String idProvinsi, String idKategori, String idUser, String url, Response.Listener<String> listener) {
         super(Request.Method.POST, url, listener, null);
         params = new HashMap<>();
         params.put("idProvinsi", idProvinsi);
         params.put("idKategori", idKategori);
+        params.put("idUser", idUser);
     }
 
     @Override

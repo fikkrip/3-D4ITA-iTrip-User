@@ -10,14 +10,22 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent">
+        android:layout_height="wrap_content">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/logotrip"
+                android:background="@color/colorPrimary"
+                android:paddingRight="10dp"
+                android:layout_gravity="start"/>
 
             <TextView
                 android:id="@+id/toolbar_title"
@@ -27,66 +35,69 @@
                 android:text="@string/itrip"
                 android:textSize="25sp"
                 android:textColor="#FFF"
-                android:textStyle="bold"
                 android:layout_gravity="start"/>
 
-            <ImageButton
-                android:id="@+id/notify"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_notifications"
-                android:background="@color/colorPrimary"
-                android:paddingRight="10dp"
-                android:layout_gravity="end"/>
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
+
     <android.support.design.widget.TabLayout
         android:id="@+id/tl_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimaryDark"
-        app:tabTextColor="#FFF"
-        app:tabSelectedTextColor="#FFF">
+        style="@style/Widget.Design.BottomNavigationView"
+        app:tabIndicatorColor="@color/colorPrimary"
+        android:background="@color/colorPrimary">
 
         <android.support.design.widget.TabItem
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/tab_explore"
-            android:text="@string/explore"
-            android:icon="@drawable/ic_home"
-            />
-
-        <android.support.design.widget.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/tab_nearme"
-            android:text="@string/nearme"
-            android:icon="@drawable/ic_nearme"/>
+            android:icon="@drawable/ic_home" />
 
         <android.support.design.widget.TabItem
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/tab_mytrip"
-            android:text="@string/mytrip"
+            android:text=""
             android:icon="@drawable/ic_mytrip"/>
 
         <android.support.design.widget.TabItem
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/tab_favorit"
+            android:text=""
+            android:icon="@drawable/ic_favorit"/>
+
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tab_nearme"
+            android:text=""
+            android:icon="@drawable/ic_nearme"/>
+
+        <android.support.design.widget.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:id="@+id/tab_account"
-            android:text="@string/account"
+            android:text=""
             android:icon="@drawable/ic_account"/>
 
     </android.support.design.widget.TabLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_main"
+    <ScrollView
+        android:id="@+id/sv_main"
         android:layout_below="@id/appBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFF"
+        android:layout_above="@id/tl_main"/>
+
+    <com.ppl.fikkrip.itrip.controller.adapter.CustomViewPager
+        android:id="@+id/vp_main"
+        android:layout_below="@id/appBar"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
         android:layout_above="@id/tl_main"/>
 
 </RelativeLayout>
